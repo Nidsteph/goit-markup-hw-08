@@ -1,0 +1,266 @@
+.modal-backdrop {
+    z-index: 100;
+    position: fixed;
+    transition: opacity 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
+        visibility 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &__container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 528px;
+        height: 581px;
+        padding: 40px;
+
+        background-color: $white;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+    }
+
+}
+
+/* the X to close the modal */
+
+
+.modal-close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    right: 11px;
+    top: 8px;
+    position: absolute;
+    border-radius: 50%;
+
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $primaryColor;
+    }
+
+    &__closing-svg {
+        cursor: pointer;
+        fill: currentColor;
+    }
+}
+
+
+
+.form-header {
+    font-family: $Roboto;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $black;
+}
+
+
+.signup-form {
+    position: absolute;
+    display: flex;
+}
+
+
+.input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 8px;
+    width: 33px;
+    height: 14px;
+    font-family: $Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+
+    margin-top: 75px;
+    margin-left: 40px;
+    left: 40px;
+    padding: 10px;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    &:hover,
+    &:focus {
+        color: $gray;
+        border-color: $secondaryBlue;
+        fill: $secondaryBlue;
+    }
+
+    &__label {
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        transition-property: fill, border-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__span {
+        position: absolute;
+        top: -16px;
+    }
+
+    &__input {
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding: 10px;
+        padding-left: 30px;
+
+        transition-property: border-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border-color: $primaryColor;
+            cursor: pointer;
+        }
+    }
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
+    }
+
+    &__textarea {
+        padding: 16px;
+        resize: none;
+        font-family: $Roboto;
+        font-style: normal;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+
+        border-color: rgba(117, 117, 117, 0.5);
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            border-color: $primaryColor;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    &__check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 34px;
+    }
+
+}
+
+
+.form-container__check .form-container__checkmark {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-container__check .form-container__check-svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    fill: none;
+    border: 2px solid #212121;
+    border-radius: 2px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-container__check .form-container__checkmark:focus+.form-container__check-svg,
+.form-container__check .form-container__checkmark:checked:focus+.form-container__check-svg {
+    outline: 2px solid #212121;
+}
+
+.form-container__check .form-container__checkmark:checked+.form-container__check-svg {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    fill: $white;
+    outline: none;
+}
+
+/* above, checkmark */
+
+.send-button {
+    width: 200px;
+    height: 50px;
+
+    background-color: $primaryColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+
+    font-family: $Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+
+    color: $white;
+
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $secondaryBlue;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+}

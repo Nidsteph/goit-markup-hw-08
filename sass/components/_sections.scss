@@ -1,0 +1,330 @@
+
+/* index */
+
+/*BACKGROUND OF THE TITLE*/
+.page-main {
+    padding: 200px 0;
+    background-color: $darkGray;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url("../images/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 30px;
+    }
+}
+
+/* benefit portion */
+.benefits__list {
+    display: flex;
+    justify-content: center;
+
+    &__goals {
+        display: flex;
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $paleWhite;
+        border-radius: $benefitsBorderRadius;
+        width: $benefitsWidth;
+        height: $benefitsHeight;
+        margin-bottom: 30px;
+    }
+
+    &__header {
+        font-style: $fontStyle;
+        font-weight: $benefitsFontWeight; 
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 10px;
+    }
+
+    &__details {
+        font-style: $fontStyle;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: $gray;
+    }
+}
+
+/*icons of the first list of goals */
+li.benefits__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+/* 2 - what we do */
+.section {
+    padding: 94px 0;
+
+    &__no-padding {
+        padding-top: 0px;
+    }
+
+    &__wwd-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__wwd-image {
+        display: flex;
+    }
+
+    &__wwd-paragraph {
+        position: absolute;
+        width: $wwdWidth;
+        padding: 20px 0;
+        bottom: 0;
+        background: rgba(47, 48, 58, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-style: $fontStyle;
+        font-weight: $wwdFontWeight;
+        font-size: $wwdFontSize;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        color: $white;
+    }
+
+}
+
+
+li.section__wwd-items:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* Our Team */
+.section__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $black;
+    margin-bottom: 50px;
+
+    &__our-team-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__our-team-item {
+        background: $white;
+        padding-bottom: 30px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__team-member {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $black;
+        margin-bottom: 10px;
+    }
+
+    &__logo-our-team {
+        margin-bottom: 30px;
+    }
+
+    &__team-position {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $gray;
+    }
+
+}
+
+.section-team {
+    background-color: $paleWhite;
+}
+
+li.section__our-team-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* regular customers */
+
+.section__customers-list {
+    display: flex;
+
+    &__customers-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        height: 92px;
+        fill: #AFB1B8;
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+
+        transition-property: fill, border;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            fill: $primaryColor;
+            border: 1px solid $primaryColor;
+        }
+
+    }
+}
+
+li.section__customers-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+
+
+
+/* PORTFOLIO */
+
+.filter__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+li.filter__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+
+/* portoflio list of images and titles with description */
+
+.project__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+.project__item {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+.project__box {
+    position: relative;
+    overflow: hidden;
+}
+
+.project__image {
+    display: block;
+    width: 100%;
+}
+
+
+.project__overlay {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    height: 100%;
+    padding: 50px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        opacity: 1;
+        height: 100%;
+        top: 0;
+    }
+}
+
+.project__overlay>p {
+
+    color: $white;
+    margin: 0;
+
+    font-family: $Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+}
+
+
+.project__link {
+    display: block;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        top: 0;
+    }
+}
+
+
+/* Text under images */
+
+.project__textbox {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
+
+h2.project__heading {
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color: $black;
+
+    padding: 0px 0px 4px 0px;
+}
+
+p.project__text {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: $gray;
+}

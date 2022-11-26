@@ -1,0 +1,55 @@
+/* socials svg */
+.socials__social-svg {
+    fill: currentColor;
+}
+
+/* footer svg */
+.footer-find-us__svg {
+    fill: currentColor;
+}
+
+/* subscribe svg */
+.subscribe-button__svg {
+    fill: white;
+}
+
+/* contact svg */
+.contact__svg {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.contact__svg:hover,
+.contact__svg:focus {
+    fill: #2196F3;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* modal svg */
+.mmodal-close-button__closing-svg {
+    cursor: pointer;
+    fill: currentColor;
+}
+
+/* form svg */
+.form-container__svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+}
+
+.form-container__check .form-container__check-svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    fill: none;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-container__check .form-container__checkmark:focus+.form-container__check-svg,
+.form-container__check .form-container__checkmark:checked:focus+.form-container__check-svg {
+    outline: 2px solid #212121;
+}

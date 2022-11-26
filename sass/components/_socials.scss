@@ -1,0 +1,41 @@
+
+
+
+/*LIST class of social media icons */
+.socials {
+    margin-top: 16px;
+
+    &__social-media-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__social-svg {
+        fill: currentColor;
+    }
+
+    &__social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 44px;
+        color: $lighterGray;
+        border-radius: 50%;
+
+        transition-property: color, background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            background-color: $primaryColor;
+            color: $white;
+        }
+    }
+}
+
+.socials__social-item:not(:last-child) {
+    margin-right: 10px;
+}
